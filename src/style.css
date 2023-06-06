@@ -1,0 +1,485 @@
+html {
+    box-sizing: border-box;
+    font-family: "Inter";
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+#app-div {
+    display: flex;
+    position: relative;
+}
+
+#card-div {
+    height: 500px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    border: 1px solid #d2d2d2;
+}
+
+#img-card-div {
+    width: 250px;
+    height: 300px;
+    display: flex;
+}
+
+#img-card-div>div {
+    width: 250px;
+    position: relative;
+}
+
+#img-card-div>div>img {
+    width: 65%;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+#text-card-div {
+    position: relative;
+    height: 150px;
+    font-weight: 200;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#card-name {
+    margin-top: 17.5px;
+    text-align: center;
+    height: 34px;
+    width: 75%;
+    font-weight: 400;
+}
+
+#line {
+    position: absolute;
+    border: 1px solid orange;
+    top: 62.5px;
+    height: 1px;
+    width: 25px;
+}
+
+#card-unit-price {
+    margin-top: 26px;
+}
+
+#card-price {
+    margin-top: 6px;
+}
+
+#btn-card-div {
+    height: 50px;
+    width: 250px;
+    display: flex;
+}
+
+#btn-card-div>button {
+    background-color: black;
+    width: 100%;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+#btn-card-div>button:hover {
+    background-color: #eabf00;
+    cursor: pointer;
+}
+
+#content-div {
+    width: 1124px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    margin-right: 50px;
+    margin-top: 150px;
+}
+
+#filters-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 50px 25px 50px;
+    margin-top: 150px;
+}
+
+#filters-div>div {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+}
+
+#filters-div>div>p {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#filters-button-div,
+#rating-button-div {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#filters-button-div>button,
+#rating-button-div>button {
+    border-radius: 100%;
+    height: 30px;
+    width: 30px;
+    border: none;
+    color: black;
+    font-weight: 200;
+    font-size: 10px;
+    background-color: #e2e2e2;
+}
+
+#filters-button-div>button:hover,
+#rating-button-div>button:hover {
+    background-color: #1b1a20;
+    color: #e2e2e2;
+}
+
+#filters-button-div>button:active,
+#rating-button-div>button:active {
+    background-color: #1b1a20;
+    color: #e2e2e2;
+}
+
+#category-div select {
+    width: 100%;
+    height: 30px;
+    background-color: #e2e2e2;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    appearance: none;
+    padding-left: 12.5px;
+    text-align: center;
+}
+
+#category-div>select:hover {
+    background-color: #1b1a20;
+    color: #e2e2e2;
+}
+
+#checkout-div {
+    position: fixed;
+    right: 0;
+    height: 100vh;
+}
+
+#checkout-div>div {
+    background-color: #1b1a20;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    align-items: center;
+}
+
+#top-checkout-div {
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 120px;
+    position: relative;
+}
+
+#top-checkout-div>img {
+    height: 30px;
+}
+
+#top-checkout-div>p {
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    font-size: 20px;
+}
+
+#top-checkout-div>div {
+    display: flex;
+    position: absolute;
+    font-size: 12px;
+    background-color: #eabf00;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+    top: 87px;
+    left: 26px;
+    color: #1b1a20;
+}
+
+#content-checkout-div {
+    font-weight: 200;
+    height: 525px;
+    width: 100%;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#subtotal-checkout-div {
+    height: max-content;
+    width: 100%;
+    padding: 25px;
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+}
+
+#top-subtotal-checkout-div {
+    margin-top: 10px;
+    height: auto;
+    margin-bottom: 25px;
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+#subtotal {
+    opacity: 0.6;
+    letter-spacing: 1.4px;
+    font-weight: 200;
+}
+
+#checkout-price {
+    color: #eabf00;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 1.4px;
+}
+
+#bottom-subtotal-checkout-div>button {
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    color: #d2d2d2;
+    background-color: black;
+    border: none;
+}
+
+#cart-card-div {
+    height: 150px;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+}
+
+#img-cart-card-div {
+    position: relative;
+    border: 1px solid white;
+    height: 100%;
+    width: 20%;
+    background-color: white;
+}
+
+#img-cart-card-div>img {
+    position: absolute;
+    width: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#text-cart-card-div {
+    width: 62%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px 10px 20px;
+}
+
+#text-cart-card-div>div {
+    display: flex;
+}
+
+#text-cart-card-div-1 {
+    align-items: flex-end;
+}
+
+#text-cart-card-div-1>p {
+    margin-right: 8px;
+}
+
+#qty {
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+#text-cart-card-div-2 {
+    font-size: 14px;
+    height: 55px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    opacity: 0.6;
+    overflow: scroll;
+}
+
+#text-cart-card-div-3 {
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+#text-cart-card-div-3>p {
+    margin-right: 8px;
+}
+
+#price-cart-card-div {
+    width: 18%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#price-cart-card-div>button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    justify-self: flex-start;
+    height: min-content;
+    font-size: 18px;
+}
+
+#price-cart-card-div>p {
+    color: #eabf00;
+    font-size: 17.5px;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+#price-cart-card-div>div {
+    width: min-content;
+    display: flex;
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+#price-cart-card-div>div>button {
+    width: 20px;
+    height: 20px;
+    border-radius: 0;
+    background-color: black;
+    color: #d2d2d2;
+    border: none;
+    display: flex;
+    line-height: 18px;
+    justify-content: center;
+}
+
+#checkout-toggle-btn {
+    position: relative;
+    font-weight: 200;
+    position: absolute;
+    height: 75px;
+    width: 75px;
+    font-size: 32px;
+    display: flex;
+    border: none;
+    left: -75px;
+    line-height: 40px;
+    background-color: #1b1a20;
+    color: #d2d2d2;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+
+#x {
+    position: absolute;
+    top: 11px;
+    left: 30px;
+    font-size: 50px;
+    align-self: center;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #eabf00;
+}
+
+#outside-cart-div>img {
+    position: absolute;
+    height: 30px;
+    margin-top: 15px;
+    left: 20px;
+}
+
+#outside-cart-div>div {
+    position: absolute;
+    display: flex;
+    position: absolute;
+    font-size: 12px;
+    background-color: #eabf00;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+    top: 45px;
+    left: 47.5px;
+    color: #1b1a20;
+}
+
+#filters-div>#rating-div {
+    height: 100px;
+}
+
+#filters-div>#rating-div>#rating-button-div {
+    height: 60px;
+    flex-wrap: wrap;
+}
+
+#filters-div>#rating-div>#rating-button-div>button {
+    margin: 5px 10px;
+}
+
+button:active {
+    background-color: #eabf00;
+}
+
+#filters-div>#rating-div>#rating-button-div>.active {
+    background-color: #1b1a20;
+    color: #e2e2e2;
+}
+
+#header-div {
+    width: 100vw;
+    height: 125px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Zeyada";
+    font-size: 150px;
+    margin-top: 42.5px;
+}
