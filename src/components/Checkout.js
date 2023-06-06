@@ -51,7 +51,7 @@ export default function Checkout(props) {
       />
     ));
   } else {
-    dataItems = <p>Add items to cart to proceed.</p>
+    dataItems = <p>Add item(s) to cart to proceed.</p>
   }
 
   return (
